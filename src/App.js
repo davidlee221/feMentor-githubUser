@@ -19,7 +19,7 @@ const handleSubmit = () => {
   const username = document.getElementById('username').value
   console.debug(username)
   const url = `https://api.github.com/users/${username}`
-  console.debug(axios.get(url))
+  axios.get(url)
     .then(response => {
       console.log(response.data)
     })
