@@ -15,7 +15,8 @@ const darkToggle = () => {
   console.debug('this')
 }
 
-const handleSubmit = () => {
+const handleSubmit = (event) => {
+  event.preventDefault();
   const username = document.getElementById('username').value
   console.debug(username)
   const url = `https://api.github.com/users/${username}`
